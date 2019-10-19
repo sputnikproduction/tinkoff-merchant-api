@@ -43,6 +43,15 @@ class TinkoffMerchantAPI {
     }
 
     /**
+     * Confirm 2-staged payment
+     * @param {Object} params Params for Confirm method except TerminalKey and Token
+     * @returns {Promise}
+     */
+    finishAuthorize(params) {
+        return this.requestMethod('FinishAuthorize', params);
+    }
+
+    /**
      * Cancel 2-staged payment
      * @param {Object} params Params for Cancel method except TerminalKey and Token
      * @returns {Promise}
